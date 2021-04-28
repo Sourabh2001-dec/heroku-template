@@ -39,7 +39,7 @@
     },
     "RATE_LIMITER_ENABLED": {
       "description": "Whether the rate limiter should be enabled or not.",
-      "value": "true"
+      "value": "false"
     },
     "RATE_LIMITER_STORE": {
       "description": "The rate limiter storage type.",
@@ -107,7 +107,7 @@
     },
     "OAUTH_PROVIDERS": {
       "description": "OAuth providers.",
-      "required": false,
+      "required": "false",
       "value": ""
     },
     "EXTENSIONS_PATH": {
@@ -117,17 +117,17 @@
     "EMAIL_FROM" : {
       "description" : "The email from which the mail is to be sent",
       "value" : "",
-      "required" : true
+      "required" : "true"
     },
     "EMAIL_SMTP_USER": {
       "description" : "The email of the google account",
       "value" : "",
-      "required" : true
+      "required" : "true"
     }, 
     "EMAIL_SMTP_PASSWORD":{
       "description" : "The password of the google account",
       "value" : "",
-      "required" : true
+      "required" : "true"
     },
     "EMAIL_TRANSPORT": {
       "description": "The email transport.",
@@ -164,7 +164,7 @@
       "options": {
         "version": "12"
       }
-    },
+    }
   ],
   "buildpacks": [
     {
