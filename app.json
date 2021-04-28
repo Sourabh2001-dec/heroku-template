@@ -71,39 +71,15 @@
     },
     "STORAGE_LOCATIONS": {
       "description": "The storage key. Please refer to the docs for more information.",
-      "value": "cloud"
+      "value": "local"
     },
-    "STORAGE_CLOUD_DRIVER": {
+    "STORAGE_LOCAL_DRIVER": {
       "description": "The storage driver.",
-      "value": "s3"
+      "value": "local"
     },
-    "STORAGE_CLOUD_ROOT": {
+    "STORAGE_LOCAL_ROOT": {
       "description": "Storage root location.",
       "value": "/"
-    },
-    "STORAGE_CLOUD_PUBLIC_URL": {
-      "description": "The storage public URL.",
-      "value": "https://your-bucket.nyc3.digitaloceanspaces.com"
-    },
-    "STORAGE_CLOUD_KEY": {
-      "description": "The storage key id.",
-      "value": "your-s3-key-id"
-    },
-    "STORAGE_CLOUD_SECRET": {
-      "description": "The storage secret key.",
-      "value": "your-s3-secret-key"
-    },
-    "STORAGE_CLOUD_ENDPOINT": {
-      "description": "The storage endpoint URL.",
-      "value": "https://nyc3.digitaloceanspaces.com"
-    },
-    "STORAGE_CLOUD_BUCKET": {
-      "description": "The storage bucket name.",
-      "value": "your-bucket"
-    },
-    "STORAGE_CLOUD_REGION": {
-      "description": "The storage bucket region.",
-      "value": "nyc3"
     },
     "KEY": {
       "description": "The application key.",
@@ -138,6 +114,21 @@
       "description": "The application's extension folder.",
       "value": "/app/extensions"
     },
+    "EMAIL_FROM" : {
+      "description" : "The email from which the mail is to be sent",
+      "value" : "",
+      "required" : true
+    },
+    "EMAIL_SMTP_USER": {
+      "description" : "The email of the google account",
+      "value" : "",
+      "required" : true
+    }, 
+    "EMAIL_SMTP_PASSWORD":{
+      "description" : "The password of the google account",
+      "value" : "",
+      "required" : true
+    },
     "EMAIL_TRANSPORT": {
       "description": "The email transport.",
       "value": "smtp"
@@ -148,7 +139,7 @@
     },
     "EMAIL_SMTP_HOST": {
       "description": "The email server host.",
-      "value": "smtp.mailgun.org"
+      "value": "smtp.gmail.com"
     },
     "EMAIL_SMTP_PORT": {
       "description": "The email server port.",
@@ -167,10 +158,6 @@
   },
   "image": "heroku/nodejs",
   "addons": [
-    {
-      "as": "MAILGUN",
-      "plan": "mailgun:starter"
-    },
     {
       "as": "DATABASE",
       "plan": "heroku-postgresql:hobby-dev",
