@@ -59,7 +59,7 @@
     },
     "CACHE_ENABLED": {
       "description": "Whether the cache should be enabled or not.",
-      "value": "true"
+      "value": "false"
     },
     "CACHE_STORE": {
       "description": "The cache store to use.",
@@ -165,13 +165,6 @@
         "version": "12"
       }
     },
-    {
-      "as": "REDIS",
-      "plan": "heroku-redis:hobby-dev",
-      "options": {
-        "version": "6"
-      }
-    }
   ],
   "buildpacks": [
     {
